@@ -2,6 +2,12 @@ import requests
 import hashlib
 import sys
 
+
+with open('pass.txt', 'r') as my_file:
+    read_file = [line.strip() for line in my_file]
+    print(list(read_file))
+ 
+
 def request_api_data(query_char):
     url = 'https://api.pwnedpasswords.com/range/' + query_char
     res = requests.get(url)
