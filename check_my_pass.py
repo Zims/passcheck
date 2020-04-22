@@ -36,10 +36,10 @@ def main(args):
         count = pwned_api_check(password)
         secret_password = password[:3] + len(password[3:])*'*'
         if count:
-            print(f'{secret_password} was found {count} times.')
+            print(f'{secret_password} was found {count} times. ❌\n')
         else:
-            print(f'{secret_password} is not not compromised')
-    return 'Done!'
+            print(f'{secret_password} is not not compromised. ✅\n')
+    return '\nDone!'
 
 if __name__ == "__main__":
     sys.exit(main(read_file))
