@@ -9,7 +9,9 @@ Than the program cheks the responses but this time using the full hashed passwor
 
 It returns the results in the terminal, but the password is partialy obscured. Also it shows the times the password appears in the compromised pass data base.
 Input txt file with passwords:
+
 ![Input txt of passwords](https://imgur.com/xEKftve.png)
 
 Result in terminal:
+
 ![Terminal output](https://i.imgur.com/Ba8eWi9.png)
