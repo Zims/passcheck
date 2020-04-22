@@ -5,7 +5,7 @@ import sys
 
 with open('pass.txt', 'r') as my_file:
     read_file = [line.strip() for line in my_file]
-    print(list(read_file))
+    print(f'\nCheking password list with {len(read_file)} items.\n\nMore passwords can be added in the text file.\nThey will get checked next time you run the file.\n')
  
 
 def request_api_data(query_char):
@@ -34,11 +34,12 @@ def pwned_api_check(password):
 def main(args):
     for password in args:
         count = pwned_api_check(password)
+        secret_password = password[:3] + len(password[3:])*'*'
         if count:
-            print(f'{password} was found {count} times.')
+            print(f'{secret_password} was found {count} times.')
         else:
-            print(f'{password} not compromised')
+            print(f'{secret_password} is not not compromised')
     return 'Done!'
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1:]))
+    sys.exit(main(read_file))
