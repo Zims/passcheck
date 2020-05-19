@@ -8,7 +8,7 @@ Than the program cheks the responses but this time using the full hashed passwor
 <h2>What I learned</h2>
 
 Using an external API. Interacting with it by following the documentation. 
-Interacting wit the OS by reading a file with the given password list. 
+Interacting with the OS by reading a file with the given password list. 
 
 <h2>This way the user can check his pass without the password leaving the computer.</h2> 
 
